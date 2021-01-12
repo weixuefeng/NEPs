@@ -1,3 +1,12 @@
+> This file has been moved to
+> https://github.com/newtonproject/NEPs/blob/main/NEPS/nep-27/index.md
+> 
+> **`master` branch** is archived and no longer in use.
+>
+> **`main` branch** is current default branch.
+>
+> learn more about this change on https://github.com/newtonproject/NEPs/issues/38
+
 # NEP 27: NewChain MainNet Opening
 
 | Item | Description |
@@ -10,18 +19,19 @@
 | Type | Process |
 | Category | Community Governance |
 | Created | 2020-11-03 |
+| Updated | 2020-12-07 |
 
 
 ### Simple Summary
 
-After NewChain TestNet successful opening, Newton Foundation is going to open NewChain MainNet by inviting the community to setup, run and maintain the ledger nodes.
+After NewChain TestNet successful opening, NewChain MainNet is going to be opened by inviting the community to setup, run and maintain the ledger nodes.
 
 ### Abstract
 
 In current stage, NewChain MainNet would still run with PoA (Proof-of-Authority) consensus mechanism for producing blocks.
 Hence a certain amount of staking would be required for keeping the ledger nodes honest and not be malicious to harm the network.
 
-Also the foundation will keep running more than half ledger nodes in the beginning stage for keeping the network safe for a smooth transition to the next stage.
+Also more than a half pre-existing ledger nodes will be kept running in the beginning stage for keeping the network safe for a smooth transition to the next stage.
 
 Once a community ledger node is activated, it would start to collect gas fees in the blocks it produces.
 
@@ -39,7 +49,7 @@ To improve the openness of NewChain MainNet, involve the community to run the ne
 
 Technical specifications can be found at those documents respectively:
 
-- [newchain-deploy](https://github.com/newtonproject/newchain-deploy): Deployment manual for setting up a NewChain node.
+- [newchain-nodes](https://github.com/newtonproject/newchain-nodes): Deployment manual for setting up a NewChain node.
 
 ### Implementation
 
@@ -48,31 +58,27 @@ Adoption of the content of this NEP requires the following steps:
 **Phase 0. Dry-run**
 
 1. The miner should be a qualified NewChain TestNet ledger node first.
-2. Any miner who want to participate MainNet mining should create a staking "community node" in NewPay and lock in AT LEAST 20,000,000 NEW.
+2. Any miner who want to participate MainNet mining should create a staking "community node" in NewPay and lock in AT LEAST 10,000,000 NEW.
 3. The miner who want to participate MainNet mining should setup the MainNet ledger node first according to the document above.
-4. The miner should prepare a self-introductory information disclosure like below, and submit it to Newton Foundation.
-	- node name:
-	- staking "community node" name and staking amount:
-	- how you will contribute to promote Newton:
-5. Newton Foundation will coordinate the joined ledger nodes to vote for new ledger nodes to be involved into the network.
+4. The miner should prepare a self-introductory information disclosure like below, and submit:
+	- node name: LEDGER-XXX (please change the XXX to your favorite words)
+	- staking "community node" name and staking amount: (as staked in the "community node" in NewPay)
+	- how you will contribute to promote Newton: (please fill the text in the description field in the "community node" in NewPay)
+5. The joined ledger nodes then vote for new ledger nodes to be involved into the network.
 
 **Phase 1. Sustainability**
 
 The NewPool release allocation program as well as the NewForce program will be upgraded to split the daily released NEW from NewPool to allocate to 
-1. "community nodes" 50%; and 
-2. ledger nodes 50% 
+1. "community nodes" ; and 
+2. ledger nodes 
 
 Other "virtual" NewForce mining that are not on-chain verifiable, such as NewMall "buy to mine", will be deprecated forever.
 
-Economic calculation:
-
-	Suppose there are 11 + 10 = 21 ledger nodes in total. 50% allocation of daily released NEW would be roughly around 1,100,000 NEW.
-	Each node will get 52380 NEW per day, which will be roughly 52380 * 0.00026 (2020-11-3) * 30 = 408 USD per month > 300 USD/month 
-	that would be sufficient to cover the maintenance fee of a ledger node.
+Economic calculation will be detailed out later soon before phase 1 is to be kicked start.
 
 **Phase 2. Self-Governance**
 
-In the first stage, Newton Foundation will coordinate the ledger nodes to vote for a new node to join, or a node to leave the network, by means of either
+In the first stage, the ledger nodes will be coordinated to vote for a new node to join, or a node to leave the network, by means of either
 1. to ask the nodes to execute a CLI command to vote; or
 2. to ask the nodes to click to vote via NewPay.
 
